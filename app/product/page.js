@@ -6,21 +6,21 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useCart } from '../context/CartContext';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const page = () => {
     const { addToCart, cartItemCount, showMessage } = useCart();
     const [data, setData] = useState(FoodData);
     const [newData, setNewData] = useState(null);
-    const searchParams = useSearchParams();
-    const id = searchParams.get('id');
+
+    const router = useRouter();
+    const { query } = router;
+    const id = query.id;
 
     const dataFetch = () => {
         const filterData = data.filter((item)=> item?.id === Number(id));
-        // console.log("filtered Data : " + JSON.stringify(filterData, null, 2));
         setNewData(filterData[0]);
-        // if(filterData.length > 0){
-        //     setNewData({...filterData[0]})
-        // }
+
     }
     useEffect(()=>{
         dataFetch();
