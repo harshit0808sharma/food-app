@@ -1,0 +1,217 @@
+import dish1 from '../../../public/images/food1.png'
+import dish3 from '../../../public/images/food3.png'
+import dish4 from '../../../public/images/food4.png'
+import dish8 from '../../../public/images/food8.png'
+import dish9 from '../../../public/images/food9.png'
+import dish14 from '../../../public/images/food14.png'
+import dish16 from '../../../public/images/food16.png'
+import dish17 from '../../../public/images/food17.png'
+import dish19 from '../../../public/images/food19.png'
+import dish20 from '../../../public/images/food20.png'
+import dish23 from '../../../public/images/food23.png'
+import dish24 from '../../../public/images/food24.png'
+import dish25 from '../../../public/images/food25.png'
+import dish26 from '../../../public/images/food26.png'
+
+
+export const FoodItems = [
+    {
+        id: 1,
+        productName: "first",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 35,
+        imgSrc: dish1,
+    },
+    {
+        id: 2,
+        productName: "second",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish3,
+    },
+    {
+        id: 3,
+        productName: "third",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish4,
+    },
+    {
+        id: 4,
+        productName: "fourth",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish8,
+    },
+    {
+        id: 5,
+        productName: "fifth",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 65,
+        imgSrc: dish9,
+    },
+    {
+        id: 6,
+        productName: "sixth",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 23,
+        imgSrc: dish14,
+    },
+    {
+        id: 7,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish16,
+    },
+]
+
+export const FoodData = [
+    {
+        id: 1,
+        categoryId: 1,
+        productName: "first",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 35,
+        imgSrc: dish1,
+        isAvailable: true,
+    },
+    {
+        id: 2,
+        categoryId: 1,
+        productName: "second",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish3,
+        isAvailable: true,
+    },
+    {
+        id: 3,
+        categoryId: 1,
+        productName: "third",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish4,
+        isAvailable: true,
+    },
+    {
+        id: 4,
+        categoryId: 1,
+        productName: "fourth",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish8,
+        isAvailable: true,
+    },
+    {
+        id: 5,
+        categoryId: 2,
+        productName: "fifth",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 65,
+        imgSrc: dish9,
+        isAvailable: true,
+    },
+    {
+        id: 6,
+        categoryId: 2,
+        productName: "sixth",
+        ratingStar: "4.2",
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 23,
+        imgSrc: dish14,
+        isAvailable: true,
+    },
+    {
+        id: 7,
+        categoryId: 3,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish16,
+        isAvailable: true,
+    },
+    {
+        id: 8,
+        categoryId: 3,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish17,
+        isAvailable: true,
+    },
+    {
+        id: 9,
+        categoryId: 3,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish19,
+        isAvailable: true,
+    },
+    {
+        id: 10,
+        categoryId: 3,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish20,
+        isAvailable: true,
+    },
+    {
+        id: 11,
+        categoryId: 4,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish23,
+        isAvailable: true,
+    },
+    {
+        id: 12,
+        categoryId: 4,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish24,
+        isAvailable: true,
+    },
+    {
+        id: 13,
+        categoryId: 4,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish25,
+        isAvailable: true,
+    },
+    {
+        id: 14,
+        categoryId: 4,
+        productName: "seventh",
+        ratingStar: 99,
+        description: "Loremenim sequi quidem facere molestias, recusandae aperiam!",
+        price: 45,
+        imgSrc: dish26,
+        isAvailable: true,
+    },
+]
