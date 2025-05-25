@@ -10,7 +10,7 @@ export const Navbar = () => {
         <ul className="flex gap-4 items-center">
           <li className="cursor-pointer">About Us</li>
           <li className="cursor-pointer">Menu</li>
-          <li className="cursor-pointer">Reviews</li>
+          <Link href="/reviews" className="cursor-pointer">Reviews</Link>
           <li className="cursor-pointer flex flex-col items-center relative">
             <span className="text-white font-semibold absolute top-[-20px]">{cartItemCount}</span>
             <Link href="/cart">Cart</Link>
