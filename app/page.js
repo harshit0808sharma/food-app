@@ -10,14 +10,20 @@ import WeServe from "./components/mainpagecomponents/WeServe";
 export default function Home() {
 
   return (
-    <div className="relative min-h-screen bg-yellow-50">
-      <Navbar/>
-      <MainPage/>
-      <PopularDishes/>
-      <WeServe/>
-      <TopMenuDishes/>
-      <Footer/>
+    <div className="relative min-h-screen bg-yellow-50 flex flex-col">
+      <Navbar />
+
+      {/* Main content container */}
+      <main className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+        <MainPage />
+        <PopularDishes />
+        <WeServe />
+        <TopMenuDishes />
+      </main>
+
+      <Footer />
     </div>
+
   );
 }
 

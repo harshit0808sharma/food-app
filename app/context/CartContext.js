@@ -1,16 +1,45 @@
 'use client'
-import { useState, createContext, useContext } from 'react'
+import { useState, createContext, useContext, useEffect } from 'react'
+import { useAuth } from './AuthContext';
+import { useRouter } from 'next/navigation';
 
 const CartContext = createContext();
 
 export const CartProvider = ({children}) => {
     const [cartItems, setCartItems] = useState([]);
     const [showMessage, setShowMessage] = useState(false);
+    const { isLoggedIn } = useAuth();
+    const router = useRouter();
+
+    //Load cart from localStorage when app starts
+
+    const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+    useEffect(() => {
+        const storedCart = localStorage.getItem('cartItems');
+        if (storedCart) {
+            setCartItems(JSON.parse(storedCart));
+        }
+        setIsFirstLoad(false);
+    }, []);
+
+    //Save cart to localStorage when cartItems change
+
+    useEffect(() => {
+    if (!isFirstLoad) {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+}, [cartItems, isFirstLoad]);
 
     //ADD TO CART
 
     const addToCart = (product) => {
         // setCartItems((prevItems)=> [...prevItems, product]);
+        if(!isLoggedIn){
+            alert("Please login!");
+            router.push('/restaurant');
+            return;
+        }
         setCartItems((prevItems)=> {
             const itemExists = prevItems.find((item)=> item.id === product.id);
             if(itemExists){

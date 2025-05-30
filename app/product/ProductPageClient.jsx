@@ -25,19 +25,20 @@ const ProductPageClient = () => {
     // useEffect to fetch the product data when the page is mounted and client-side
     useEffect(() => {
         if (isClient && productId) {
-            console.log("Product ID:", productId);  // Debugging: Check if product ID is available
+            // console.log("Product ID:", productId);  // Debugging: Check if product ID is available
 
             // Convert productId to number for comparison
             const id = Number(productId); // Ensure the id is a number
             const filterData = data.filter((item) => item?.id === id); // Find the product by id
             
-            console.log("Filtered Data:", filterData);  // Debugging: Check if filterData is populated
+            // console.log("Filtered Data:", filterData);  // Debugging: Check if filterData is populated
             
             if (filterData.length > 0) {
                 setNewData(filterData[0]); // Set the product data to state if found
-            } else {
-                console.log("No product found for ID:", id);  // Debugging: If no product is found
-            }
+            } 
+            // else {
+            //     console.log("No product found for ID:", id);  // Debugging: If no product is found
+            // }
         }
     }, [isClient, productId, data]); // Re-run the effect if isClient, productId, or data changes
 
