@@ -19,7 +19,7 @@ export const Navbar = () => {
         p-4
         bg-transparent
         text-black
-        gap-4
+        gap-1
       "
     >
       {/* Foodify title always visible with black text */}
@@ -48,7 +48,7 @@ export const Navbar = () => {
         ) : (
           <button
             onClick={() => router.push('/restaurant')}
-            className="p-2 border-2 border-yellow-500 rounded-full bg-yellow-300 w-24 cursor-pointer text-black hover:bg-yellow-400 transition whitespace-nowrap"
+            className="p-1 border-2 border-yellow-500 rounded-full bg-yellow-300 w-24 cursor-pointer text-black hover:bg-yellow-400 transition whitespace-nowrap"
           >
             Sign Up
           </button>
