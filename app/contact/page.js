@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import { Navbar } from "../components/nav/Navbar";
+import toast from "react-hot-toast";
 
 const Index = () => {
   const [name, setName] = useState("");
@@ -13,16 +14,16 @@ const Index = () => {
 
   const handleSend = () => {
     if (!name.trim() || !email.trim() || !message.trim()) {
-      alert("Please fill out all fields.");
+      toast.success("Please fill out all fields.");
       return;
     }
 
     if (!validateEmail(email)) {
-      alert("Please enter a valid email address.");
+      toast.success("Please enter a valid email address.");
       return;
     }
 
-    alert("Thank you for contacting us!");
+    toast.success("Thank you for contacting us!");
     // Clear form
     setName("");
     setEmail("");
@@ -30,7 +31,7 @@ const Index = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-yellow-50 px-4 py-10">
+    <div className="w-full min-h-screen flex flex-col justify-center items-center bg-yellow-50 px-4 py-32">
       <Navbar />
       <div className="shadow-2xl bg-yellow-700 w-full max-w-4xl flex flex-col md:flex-row items-center gap-6 p-6 relative">
         {/* Contact Info */}

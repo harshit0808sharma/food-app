@@ -2,6 +2,7 @@
 import { useState, createContext, useContext, useEffect } from 'react'
 import { useAuth } from './AuthContext';
 import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
 
 const CartContext = createContext();
 
@@ -36,7 +37,7 @@ export const CartProvider = ({children}) => {
     const addToCart = (product) => {
         // setCartItems((prevItems)=> [...prevItems, product]);
         if(!isLoggedIn){
-            alert("Please login!");
+            toast.success("Please login!");
             router.push('/restaurant');
             return;
         }

@@ -10,7 +10,7 @@ import WeServe from "./components/mainpagecomponents/WeServe";
 export default function Home() {
 
   return (
-    <div className="relative min-h-screen bg-yellow-50 flex flex-col">
+    <div className="relative min-h-screen bg-yellow-50 flex flex-col pt-10 sm:pt-0 md:pt-0">
       <Navbar />
 
       {/* Main content container */}

@@ -1,6 +1,7 @@
 'use client'
 import { useRouter } from 'next/navigation';
 import { useState, createContext, useContext, useEffect } from 'react'
+import toast from 'react-hot-toast';
 
 const AuthContext = createContext();
 
@@ -28,7 +29,7 @@ export const AuthProvider = ({children}) => {
         setUser(null);
         setIsLoggedIn(false);
         // setLogin(false);
-        alert("You have been logged out.");
+        toast.success("You have been logged out.");
         router.push('/restaurant');
     }
 
@@ -39,7 +40,7 @@ export const AuthProvider = ({children}) => {
             localStorage.removeItem('currentUser');
             setUser(null);
             setIsLoggedIn(false);
-            alert('Your All Accounts have been Delelted.');
+            toast.success('Your All Accounts have been Delelted.');
             router.push('/restaurant');
         }
     }
