@@ -34,7 +34,7 @@ const SingUp = ({setLogin}) => {
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className='w-full max-w-4xl h-auto md:h-[70vh] bg-white rounded-3xl flex flex-col md:flex-row shadow-black shadow-md overflow-hidden'>
+      <div className='w-full max-w-4xl h-auto md:h-[70vh] bg-white rounded-3xl flex flex-col md:flex-row shadow-black shadow-md overflow-hidden mt-16'>
         
         {/* Left Side - Sign Up Form */}
         <div className="flex flex-col items-center justify-center gap-5 p-8 bg-transparent w-full md:basis-[50%]">
