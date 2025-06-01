@@ -13,14 +13,14 @@ const SingUp = ({setLogin}) => {
   const handleSignUp = () => {
 
     if(!username || !email || !password){
-      toast.success("please fill all fields");
+      toast.error("please fill all fields");
       return;
     }
     const newUser = {username, email, password};
     const allUsers = JSON.parse(localStorage.getItem('allUsers')) || [];
     const alreadyExists = allUsers.some(user => user.eamil === email);
     if(alreadyExists){
-      toast.success('User already exists. Please Login.');
+      toast.error('User already exists. Please Login.');
       return;
     }
     allUsers.push(newUser);

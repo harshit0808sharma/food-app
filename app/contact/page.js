@@ -14,12 +14,12 @@ const Index = () => {
 
   const handleSend = () => {
     if (!name.trim() || !email.trim() || !message.trim()) {
-      toast.success("Please fill out all fields.");
+      toast.error("Please fill out all fields.");
       return;
     }
 
     if (!validateEmail(email)) {
-      toast.success("Please enter a valid email address.");
+      toast.error("Please enter a valid email address.");
       return;
     }
 

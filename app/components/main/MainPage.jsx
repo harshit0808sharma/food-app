@@ -1,6 +1,6 @@
 import Image from "next/image"
 import img from '../../../public/images/food16.png'
-import food23 from '../../../public/images/food23.png'
+import food8 from '../../../public/images/food8.png'
 import Link from "next/link"
 
 export const MainPage = () => {
@@ -18,17 +18,17 @@ export const MainPage = () => {
           </p>
           <div className="flex gap-5 flex-wrap">
             <button className="p-2 border-2 border-yellow-500 rounded-full bg-yellow-300 w-32 hover:bg-yellow-400 transition">
-              Explore Food
+              <Link href="/home">Explore More</Link>
             </button>
             <button className="p-2 border-2 border-yellow-500 rounded-full w-32 hover:bg-yellow-100 transition">
-              <Link href="/home">Search</Link>
+              <Link href="/contact">Contact Us</Link>
             </button>
           </div>
         </div>
 
         {/* Right Image + Buttons */}
         <div className="relative md:basis-1/2 flex flex-col md:flex-row items-center gap-6 md:gap-10 bg-yellow-100 rounded-3xl p-6 md:p-10">
-          <Image src={food23} alt="random" className="w-64 h-64 md:w-96 md:h-96 object-cover rounded-xl" />
+          <Image src={food8} alt="random" className="w-64 h-64 md:w-96 md:h-96 object-cover rounded-xl" />
 
           <div className="flex flex-wrap md:flex-col gap-3">
             {["Dishes", "Dessert", "Drinks", "Platter", "Snacks"].map((item) => (

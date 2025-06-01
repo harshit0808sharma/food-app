@@ -37,7 +37,7 @@ export const CartProvider = ({children}) => {
     const addToCart = (product) => {
         // setCartItems((prevItems)=> [...prevItems, product]);
         if(!isLoggedIn){
-            toast.success("Please login!");
+            toast.error("Please login!");
             router.push('/restaurant');
             return;
         }

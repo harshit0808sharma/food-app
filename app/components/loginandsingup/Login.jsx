@@ -18,7 +18,7 @@ const Login = ({setLogin}) => {
       toast.success(`Welcome, ${fonundUser.username}`);
       router.replace('/');
     }else{
-      toast.success('Invalid credentials or user not fonund. please sign up.');
+      toast.error('Invalid credentials or user not fonund. please sign up.');
     }
   }
 
