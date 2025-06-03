@@ -38,6 +38,7 @@ export const AuthProvider = ({children}) => {
         if(confirmDelete){
             localStorage.removeItem('allUsers');
             localStorage.removeItem('currentUser');
+            localStorage.removeItem('cartItems');
             setUser(null);
             setIsLoggedIn(false);
             toast.success('Your All Accounts have been Delelted.');

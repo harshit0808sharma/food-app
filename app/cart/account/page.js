@@ -19,7 +19,7 @@ const account = () => {
       {/* Nav Items */}
       <ul className="flex flex-wrap justify-center md:flex-col md:items-center gap-4 text-sm md:text-base">
         <Link href="/cart" className="text-center cursor-pointer">Cart</Link>
-        <li className="text-center cursor-pointer">Order History</li>
+        <Link href="/cart/orders" className="text-center cursor-pointer">Order History</Link>
         <li className="text-center cursor-pointer border-2 border-black md:border-white rounded-md px-2 py-1">
           My Account
         </li>

@@ -39,10 +39,10 @@ export const Navbar = () => {
               <span className="absolute -top-5 right-0 bg-red-600 rounded-full px-2 text-xs font-bold text-white">
                 {cartItemCount}
               </span>
-              <Link href="/cart" className="text-black">Cart</Link>
+              <Link href="/cart" className="text-black hover:underline">Cart</Link>
             </li>
             <li className="flex flex-col items-center md:flex-row md:gap-3 whitespace-nowrap">
-              <Link href="/cart/account" className="text-blue-600 font-extrabold hover:underline">Account</Link>
+              <Link href="/cart/account" className="px-1 border-2 border-yellow-500 rounded-full bg-green-500 w-20 cursor-pointer text-center text-black hover:bg-green-600 transition whitespace-nowrap hover:underline">Account</Link>
             </li>
           </>
         ) : (

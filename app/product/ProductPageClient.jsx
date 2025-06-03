@@ -48,44 +48,62 @@ const ProductPageClient = () => {
     }
 
     return (
-        <div className="relative w-full min-h-screen bg-yellow-50 gap-6 flex flex-col items-center justify-center">
-            <div className="fixed top-0 w-full flex justify-between bg-transparent px-10 py-4">
-                <h1 className="font-extrabold text-2xl text-yellow-800"><Link href="/">Foodify</Link></h1>
-                <p className="cursor-pointer flex flex-col items-center relative">
-                    <span className="text-black font-semibold">no: {cartItemCount}</span>
-                    <Link href="/cart">Cart</Link>
+        <div className="relative w-full min-h-screen bg-yellow-50 flex flex-col items-center justify-start gap-6">
+            {/* Navbar */}
+            <div className="fixed top-0 w-full flex justify-between items-center bg-transparent px-6 py-4 z-10">
+                <h1 className="font-extrabold text-xl md:text-2xl text-yellow-800">
+                <Link href="/">Foodify</Link>
+                </h1>
+                <p className="cursor-pointer flex flex-col items-center relative text-sm md:text-base">
+                <span className="text-black font-semibold">no: {cartItemCount}</span>
+                <Link href="/cart">Cart</Link>
                 </p>
-                <span className={`absolute bottom-[-45px] right-0 py-2 px-4 text-center bg-green-600 text-white rounded-sm ${showMessage ? 'block' : 'hidden'}`}>{cartItemCount} Item Added</span>
+                <span className={`absolute bottom-[-45px] right-0 py-2 px-4 text-center bg-green-600 text-white rounded-sm ${showMessage ? 'block' : 'hidden'}`}>
+                {cartItemCount} Item Added
+                </span>
             </div>
 
-            <div className='flex items-center w-[60%] h-[75vh] bg-transparent'>
-                <div className=" bg-yellow-800 h-full flex justify-center items-center basis-[50%] shadow-2xl rounded-2xl">
-                    <img src={newData?.imgSrc?.src} alt="random" className="w-full h-auto"/>
+            {/* Main Content */}
+            <div className="flex flex-col lg:flex-row items-center w-full max-w-6xl px-4 md:px-10 pt-32 lg:pt-40 gap-6">
+                {/* Image Section */}
+                <div className="w-full lg:basis-1/2 bg-yellow-800 flex justify-center items-center shadow-2xl rounded-2xl">
+                <img src={newData?.imgSrc?.src} alt="random" className="w-full h-auto max-h-[400px] object-contain" />
                 </div>
-                <div className='flex flex-col gap-4 basis-[50%] p-10 bg-white shadow-2xl h-[70vh] border-y-2 border-r-2 rounded-r-md border-yellow-800'>
-                    <h2 className="uppercase text-yellow-800 font-extrabold text-2xl">{newData?.productName}</h2>
-                    <p className="text-sm">{newData?.description}</p>
-                    <h3 className="text-lg font-light">${newData?.price}</h3>
-                    <span className="text-xl">{newData?.ratingStar}</span>
-                    <div className="flex items-center gap-5 text-lg">
-                        <p>Size : </p>
-                        <label htmlFor="small">
-                            <input type="radio" name="size" id="small" className=""/>
-                            <span>S</span>
-                        </label>
-                        <label htmlFor="medium">
-                            <input type="radio" name="size" id="medium"/>
-                            <span>M</span>
-                        </label>
-                        <label htmlFor="large">
-                            <input type="radio" name="size" id="large"/>
-                            <span>L</span>
-                        </label>
-                    </div>
-                    <button onClick={() => addToCart(newData)} className="text-white bg-yellow-800 px-6 py-1 inline-block w-[50%]">ADD TO CART</button>
+
+                {/* Details Section */}
+                <div className="w-full lg:basis-1/2 flex flex-col gap-4 p-6 bg-white shadow-2xl border-y-2 border-r-2 rounded-md lg:rounded-r-md border-yellow-800">
+                <h2 className="uppercase text-yellow-800 font-extrabold text-xl md:text-2xl">{newData?.productName}</h2>
+                <p className="text-sm md:text-base">{newData?.description}</p>
+                <h3 className="text-lg font-light">${newData?.price}</h3>
+                <span className="text-xl">{newData?.ratingStar}</span>
+
+                {/* Size Options */}
+                <div className="flex items-center gap-5 text-base">
+                    <p>Size:</p>
+                    <label htmlFor="small" className="flex items-center gap-1">
+                    <input type="radio" name="size" id="small" />
+                    <span>S</span>
+                    </label>
+                    <label htmlFor="medium" className="flex items-center gap-1">
+                    <input type="radio" name="size" id="medium" />
+                    <span>M</span>
+                    </label>
+                    <label htmlFor="large" className="flex items-center gap-1">
+                    <input type="radio" name="size" id="large" />
+                    <span>L</span>
+                    </label>
+                </div>
+
+                <button
+                    onClick={() => addToCart(newData)}
+                    className="text-white bg-yellow-800 px-6 py-2 w-full sm:w-[50%] rounded"
+                >
+                    ADD TO CART
+                </button>
                 </div>
             </div>
-        </div>
+            </div>
+
     );
 }
 
