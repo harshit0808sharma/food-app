@@ -35,7 +35,7 @@ export const Navbar = () => {
 
         {user ? (
           <>
-            <li className="relative cursor-pointer flex flex-col items-center whitespace-nowrap">
+            <li className="relative cursor-pointer hidden flex-col items-center whitespace-nowrap sm:flex">
               <span className="absolute -top-5 right-0 bg-red-600 rounded-full px-2 text-xs font-bold text-white">
                 {cartItemCount}
               </span>
